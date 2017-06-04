@@ -9,7 +9,7 @@ RUN apt-get update -y && \
         libjpeg62-turbo-dev
 
 RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
-RUN docker-php-ext-install gd
+RUN docker-php-ext-install gd exif
 
 RUN docker-php-ext-install mysql
 
